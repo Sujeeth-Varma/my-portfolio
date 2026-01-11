@@ -23,9 +23,12 @@ export default function Experience() {
       <h2 className="text-lg font-semibold text-white mb-6">Experience</h2>
       <div className="space-y-6">
         {experiences.map((exp, index) => (
-          <div key={index} className="flex justify-between items-start">
+          <div
+            key={index}
+            className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4"
+          >
             <div className="flex gap-4">
-              <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold border border-zinc-700">
+              <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold border border-zinc-700 shrink-0">
                 <Image
                   src={exp.logo}
                   alt={exp.company}
@@ -38,7 +41,9 @@ export default function Experience() {
                 <p className="text-zinc-500 text-sm">{exp.role}</p>
               </div>
             </div>
-            <span className="text-zinc-500 text-sm">{exp.duration}</span>
+            <span className="text-zinc-500 text-sm sm:text-right shrink-0">
+              {exp.duration}
+            </span>
           </div>
         ))}
       </div>

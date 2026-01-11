@@ -17,13 +17,13 @@ export default function Hero() {
         <Image
           src={"/image.png"}
           width={100}
-          height={10070}
+          height={100}
           className="inset-0"
           alt="profile"
         />
       </div>
       <div>
-        <h1 className="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
+        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex flex-wrap items-center gap-x-2 gap-y-1">
           {NAME.split(" ").map((word, idx) => (
             <motion.span
               initial={{ opacity: 0, filter: "blur(10px)" }}
