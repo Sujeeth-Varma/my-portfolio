@@ -23,8 +23,8 @@ export default function Home() {
 
         <Hero />
         <About />
-        <Experience />
-        <Education />
+        {/* <Experience /> */}
+        {/* <Education /> */}
         <TechStack />
         <Projects />
         <Contact />

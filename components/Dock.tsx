@@ -22,11 +22,11 @@ export default function Dock() {
       label: "Twitter",
       href: "https://x.com/agentX_dev",
     },
-    {
-      icon: <FileText className="w-5 h-5" />,
-      label: "Resume",
-      href: "/resume/Sujeeth_Resume.pdf",
-    },
+    // {
+    //   icon: <FileText className="w-5 h-5" />,
+    //   label: "Resume",
+    //   href: "/resume/Sujeeth_Resume.pdf",
+    // },
   ];
 
   return (
