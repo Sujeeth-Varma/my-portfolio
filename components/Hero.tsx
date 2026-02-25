@@ -12,7 +12,7 @@ export default function Hero() {
       transition={{ duration: 0.5 }}
       className="flex items-center gap-4 mb-8"
     >
-      <div className="w-20 h-20 rounded-full bg-zinc-800 overflow-hidden border border-zinc-700 flex items-center justify-center shrink-0">
+      <div className="w-20 h-20 rounded-full bg-chip overflow-hidden border border-zinc-700 flex items-center justify-center shrink-0">
         {/* Placeholder for avatar */}
         <Image
           src={"/image.png"}
@@ -23,7 +23,7 @@ export default function Hero() {
         />
       </div>
       <div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight flex flex-wrap items-center gap-x-2 gap-y-1">
+        <h1 className="text-2xl sm:text-3xl font-bold text-primary tracking-tight flex flex-wrap items-center gap-x-2 gap-y-1">
           {NAME.split(" ").map((word, idx) => (
             <motion.span
               initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -36,11 +36,9 @@ export default function Hero() {
             </motion.span>
           ))}
         </h1>
-        <div className="mt-2 inline-flex items-center px-2 py-1 bg-zinc-900 border border-zinc-800 rounded-md hover:bg-zinc-800 cursor-pointer transition-colors">
-          <span className="bg-emerald-500 w-2 h-2 rounded-full mr-2"></span>
-          <span className="text-zinc-400 text-sm font-mono">
-            aka agentx_dev
-          </span>
+        <div className="mt-2 inline-flex items-center px-2 py-1 bg-card border border-zinc-800 rounded-md bg-card-hover cursor-pointer transition-colors">
+          <span className="bg-status-online w-2 h-2 rounded-full mr-2"></span>
+          <span className="text-muted text-sm font-mono">aka agentx_dev</span>
         </div>
       </div>
     </motion.section>

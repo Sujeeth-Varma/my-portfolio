@@ -1,8 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050505;
-  --foreground: #e5e5e5;
+  --app-bg: #000000;
+  --app-surface: #070707;
+  --app-border: #27272a;
+  --app-text: #ffffff;
+  --app-text-muted: #a1a1aa;
+  --app-text-subtle: #71717a;
+  --app-nav-bg: rgba(24, 24, 27, 0.72);
+  --app-nav-link: #d4d4d8;
+  --app-nav-link-hover: #ffffff;
+  --app-button-bg: #27272a;
+  --app-button-text: #ffffff;
+  --app-button-hover: #3f3f46;
+  --app-card-bg: #18181b;
+  --app-card-bg-hover: #27272a;
+  --app-chip-bg: #27272a;
+  --app-chip-text: #a1a1aa;
+  --app-soft-bg: rgba(255, 255, 255, 0.08);
+  --app-contrast-bg: #ffffff;
+  --app-contrast-text: #000000;
+  --app-contrast-hover: #e4e4e7;
+  --app-project-gradient: linear-gradient(
+    to bottom right,
+    #4a044e,
+    #581c87,
+    #312e81
+  );
+  --app-status-online: #10b981;
+  --tech-java: #dc2626;
+  --tech-spring: #16a34a;
+  --tech-typescript: #60a5fa;
+  --tech-node: #22c55e;
+  --tech-python: #facc15;
+  --tech-mongodb: #4ade80;
+  --tech-react: #22d3ee;
+  --tech-express: #71717a;
+  --tech-docker: #2563eb;
+  --tech-microservices: #52525b;
+  --tech-postgres: #1d4ed8;
+  --tech-javascript: #fde047;
+
+  --background: var(--app-bg);
+  --foreground: var(--app-text);
 }
 
 @theme inline {
@@ -32,4 +72,157 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+.app-shell {
+  background: var(--app-bg);
+  color: var(--app-text);
+}
+
+.app-frame {
+  background: var(--app-surface);
+  border-color: var(--app-border);
+}
+
+.navbar-shell {
+  background: var(--app-nav-bg);
+  border: 1px solid var(--app-border);
+  color: var(--app-text);
+  backdrop-filter: blur(6px);
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: var(--app-nav-link);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--app-nav-link-hover);
+}
+
+.text-primary {
+  color: var(--app-text);
+}
+
+.text-muted {
+  color: var(--app-text-muted);
+}
+
+.text-subtle {
+  color: var(--app-text-subtle);
+}
+
+.text-chip {
+  color: var(--app-chip-text);
+}
+
+.link-muted {
+  color: var(--app-text-muted);
+  transition: color 0.2s ease;
+}
+
+.link-muted:hover {
+  color: var(--app-text);
+}
+
+.bg-card {
+  background: var(--app-card-bg);
+}
+
+.bg-card-hover:hover {
+  background: var(--app-card-bg-hover);
+}
+
+.bg-chip {
+  background: var(--app-chip-bg);
+}
+
+.bg-soft {
+  background: var(--app-soft-bg);
+}
+
+.bg-project-gradient {
+  background: var(--app-project-gradient);
+}
+
+.bg-status-online {
+  background: var(--app-status-online);
+}
+
+.btn-solid {
+  background: var(--app-button-bg);
+  color: var(--app-button-text);
+}
+
+.btn-solid:hover {
+  background: var(--app-button-hover);
+}
+
+.btn-contrast {
+  background: var(--app-contrast-bg);
+  color: var(--app-contrast-text);
+}
+
+.btn-contrast:hover {
+  background: var(--app-contrast-hover);
+}
+
+.hover-text-primary:hover {
+  color: var(--app-text);
+}
+
+.text-tech-java {
+  color: var(--tech-java);
+}
+
+.text-tech-spring {
+  color: var(--tech-spring);
+}
+
+.text-tech-typescript {
+  color: var(--tech-typescript);
+}
+
+.text-tech-node {
+  color: var(--tech-node);
+}
+
+.text-tech-python {
+  color: var(--tech-python);
+}
+
+.text-tech-mongodb {
+  color: var(--tech-mongodb);
+}
+
+.text-tech-react {
+  color: var(--tech-react);
+}
+
+.text-tech-express {
+  color: var(--tech-express);
+}
+
+.text-tech-docker {
+  color: var(--tech-docker);
+}
+
+.text-tech-microservices {
+  color: var(--tech-microservices);
+}
+
+.text-tech-postgres {
+  color: var(--tech-postgres);
+}
+
+.text-tech-javascript {
+  color: var(--tech-javascript);
 }

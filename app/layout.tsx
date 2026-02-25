@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Dock from "@/components/Dock";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,7 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased min-h-screen app-shell`}>
+        <main className="min-h-screen">
+          <div className="relative min-h-screen max-w-4xl border-2 border-y-0 app-frame mx-auto px-6 py-12">
+            {/* <Navbar /> */}
+            {children}
+            <Dock />
+          </div>
+        </main>
+      </body>
     </html>
   );
 }

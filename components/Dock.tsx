@@ -1,12 +1,17 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Home, Github, Linkedin, Twitter, FileText } from "lucide-react";
+import { Home, Github, Linkedin, Twitter, Folder } from "lucide-react";
 import Link from "next/link";
 
 export default function Dock() {
   const icons = [
     { icon: <Home className="w-5 h-5" />, label: "Home", href: "/" },
+    {
+      icon: <Folder className="w-5 h-5" />,
+      label: "Projects",
+      href: "/projects",
+    },
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
@@ -36,21 +41,23 @@ export default function Dock() {
       transition={{ delay: 1, duration: 0.5 }}
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 hover:scale-105 duration-200 transition ease-in-out"
     >
-      <div className="flex items-center gap-2 px-4 py-2 bg-zinc-900/80 backdrop-blur-md border border-zinc-800/50 rounded-full shadow-lg shadow-black/50">
+      <div className="flex items-center gap-2 px-4 py-2 bg-soft backdrop-blur-md border border-zinc-800/50 rounded-full shadow-lg shadow-black/50">
         {icons.map((item, index) => (
           <Link
             href={item.href}
             key={index}
-            target={item.href == "/" ? "_self" : "_blank"}
-            rel="noopener noreferrer"
+            target={item.href.startsWith("http") ? "_blank" : "_self"}
+            rel={
+              item.href.startsWith("http") ? "noopener noreferrer" : undefined
+            }
           >
             <button
               key={index}
-              className="p-2 rounded-full text-zinc-400 hover:text-white hover:bg-zinc-800 transition-all cursor-pointer relative group"
+              className="p-2 rounded-full text-muted hover-text-primary bg-card-hover transition-all cursor-pointer relative group"
               aria-label={item.label}
             >
               {item.icon}
-              <span className="absolute top-0 left-1/2 -translate-x-1/2 px-2 py-1 bg-zinc-800 text-xs text-white rounded opacity-0 group-hover:opacity-100 group-hover:-top-10 duration-200 transition-all whitespace-nowrap pointer-events-none border border-zinc-700 ">
+              <span className="absolute top-0 left-1/2 -translate-x-1/2 px-2 py-1 bg-chip text-xs text-primary rounded opacity-0 group-hover:opacity-100 group-hover:-top-10 duration-200 transition-all whitespace-nowrap pointer-events-none border border-zinc-700 ">
                 {item.label}
               </span>
             </button>

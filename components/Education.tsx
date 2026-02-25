@@ -11,10 +11,10 @@ export default function Education() {
       transition={{ duration: 0.5, delay: 0.3 }}
       className="mb-12"
     >
-      <h2 className="text-lg font-semibold text-white mb-6">Education</h2>
+      <h2 className="text-lg font-semibold text-primary mb-6">Education</h2>
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
         <div className="flex gap-4">
-          <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold border border-zinc-700 shrink-0">
+          <div className="w-10 h-10 rounded-full bg-chip flex items-center justify-center text-xs font-bold border border-zinc-700 shrink-0">
             <Image
               src="/sietk.png"
               alt="Siddharth Institute of Engineering and Technology"
@@ -23,17 +23,17 @@ export default function Education() {
             />
           </div>
           <div>
-            <h3 className="text-white font-medium">
+            <h3 className="text-primary font-medium">
               Siddharth Institute of Engineering and Technology
             </h3>
-            <p className="text-zinc-500 text-sm">
+            <p className="text-muted text-sm">
               B.Tech in Computer Science and Engineering
             </p>
           </div>
         </div>
         <div className="sm:text-right max-sm:flex max-sm:gap-2 shrink-0">
-          <span className="text-zinc-500 text-sm block">2022 - 2026</span>
-          <span className="text-zinc-500 text-sm block">CGPA: 9.01/10</span>
+          <span className="text-muted text-sm block">2022 - 2026</span>
+          <span className="text-muted text-sm block">CGPA: 9.01/10</span>
         </div>
       </div>
     </motion.section>
