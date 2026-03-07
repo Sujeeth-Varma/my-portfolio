@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="w-20 h-20 rounded-full bg-chip overflow-hidden border border-zinc-700 flex items-center justify-center shrink-0">
         {/* Placeholder for avatar */}
         <Image
-          src={"/image.png"}
+          src={"/image.webp"}
           width={100}
           height={100}
           className="inset-0"
