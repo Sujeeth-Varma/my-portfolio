@@ -14,6 +14,27 @@ export const metadata: Metadata = {
   title: "Sujeeth Varma ",
   description:
     "Portfolio of Sujeeth Varma - Aspiring FullStack Engineer and Tech Enthusiast",
+  openGraph: {
+    title: "Sujeeth Varma",
+    description:
+      "Portfolio of Sujeeth Varma - Aspiring FullStack Engineer and Tech Enthusiast",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sujeeth Varma Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sujeeth Varma",
+    description:
+      "Portfolio of Sujeeth Varma - Aspiring FullStack Engineer and Tech Enthusiast",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
