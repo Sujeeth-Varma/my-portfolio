@@ -26,10 +26,6 @@ export default function Contact() {
         <span>Say Hello</span>
         <ArrowRight className="w-4 h-4 absolute right-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all" />
       </a>
-
-      <div className="mt-16 text-xs text-subtle">
-        <p>© {new Date().getFullYear()} Sujeeth Varma. All rights reserved.</p>
-      </div>
     </motion.section>
   );
 }
