@@ -38,7 +38,7 @@ export default function Hero() {
         </h1>
         <div className="mt-2 inline-flex items-center px-2 py-1 bg-card border border-zinc-800 rounded-md bg-card-hover cursor-pointer transition-colors">
           <span className="bg-status-online w-2 h-2 rounded-full mr-2"></span>
-          <span className="text-muted text-sm font-mono">aka agentx_dev</span>
+          <span className="text-muted text-sm font-mono">open to work</span>
         </div>
       </div>
     </motion.section>

@@ -11,8 +11,15 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "ClipLink",
-    name: "ClipLink - A URL Shortener",
-    tags: ["Java", "Spring Boot", "React", "Analytics", "PostgreSQL", "URL Shortener"],
+    name: "ClipLink - URL Shortener",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "React",
+      "Analytics",
+      "PostgreSQL",
+      "URL Shortener",
+    ],
     description:
       "ClipLink is a URL shortening service built with Java Spring Boot for the backend and React for the frontend. It provides features like link shortening, analytics, and user management. The application uses PostgreSQL for data persistence.",
     githubLink: "https://github.com/Sujeeth-Varma/url-shortner",

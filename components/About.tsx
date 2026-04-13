@@ -3,10 +3,9 @@
 import { motion } from "motion/react";
 
 export default function About() {
-  const DESCRIPTION = `Aspiring Software Engineer specialized in the Spring Boot and React ecosystem. With a background
-ranging from Harvard’s CS50 to practical internship experience, I focus on writing clean, maintainable code
-and building secure, containerized applications. I am driven by solving complex architectural challenges
-and delivering user-centric software solutions.`;
+  const DESCRIPTION = `An aspiring Full Stack Developer specialized in the Java ecosystem and Gen-AI applications. Gained
+hands-on experience through internships and academic projects. Looking for Full Stack or SDE roles to
+contribute to software development and grow as a developer.`;
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
