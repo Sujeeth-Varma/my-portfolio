@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import PageIntro from "@/components/motion/PageIntro";
 import RequestTrace from "@/components/motion/RequestTrace";
 import CapabilityList from "@/components/profile/CapabilityList";
@@ -14,24 +15,43 @@ export default function Home() {
   return (
     <PageIntro>
       <section className="hero" aria-labelledby="hero-title">
-        <div className="hero-status">
-          <span aria-hidden="true" />
-          {profile.availability}
+        <div className="hero-copy">
+          <div className="hero-status">
+            <span aria-hidden="true" />
+            {profile.availability}
+          </div>
+
+          <div className="hero-title-row">
+            <figure className="hero-portrait">
+              <Image
+                src="/profile.webp"
+                alt="Ink portrait of Sujeeth Varma wearing headphones"
+                width={768}
+                height={768}
+                priority
+                sizes="96px"
+              />
+            </figure>
+            <div className="hero-identity">
+              <h1 id="hero-title">{profile.name}</h1>
+              <p>{profile.role}</p>
+            </div>
+          </div>
+
+          <p className="hero-summary">{profile.summary}</p>
+
+          <RequestTrace />
+
+          <div className="hero-actions">
+            <Link className="primary-link" href="/projects">
+              View my work
+            </Link>
+            <a className="secondary-link" href={`mailto:${profile.email}`}>
+              Email me
+            </a>
+          </div>
         </div>
 
-        <h1 id="hero-title">{profile.role}.</h1>
-        <p className="hero-summary">{profile.summary}</p>
-
-        <RequestTrace />
-
-        <div className="hero-actions">
-          <Link className="primary-link" href="/projects">
-            View my work
-          </Link>
-          <a className="secondary-link" href={`mailto:${profile.email}`}>
-            Email me
-          </a>
-        </div>
       </section>
 
       <section className="content-section" aria-labelledby="capabilities-title">

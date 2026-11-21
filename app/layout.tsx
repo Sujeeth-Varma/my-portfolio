@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: "/icon.svg",
+    icon: [{ url: "/icon.webp", type: "image/webp" }],
+    shortcut: "/icon.webp",
   },
   openGraph: {
     title: "Sujeeth Varma",
