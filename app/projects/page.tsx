@@ -1,25 +1,30 @@
-import Link from "next/link";
-import ProjectCard from "@/components/ProjectCard";
+import type { Metadata } from "next";
+import PageIntro from "@/components/motion/PageIntro";
+import ProjectList from "@/components/projects/ProjectList";
 import { projects } from "@/data/projects";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Backend and full-stack projects by Sujeeth Varma, including architecture and engineering decisions.",
+  alternates: {
+    canonical: "/projects",
+  },
+};
 
 export default function ProjectsPage() {
   return (
-    <>
-      <div className="mb-10">
-        <Link href="/" className="text-sm link-muted">
-          ← Back to home
-        </Link>
-        <h1 className="text-3xl font-bold mt-4 text-primary">Projects</h1>
-        <p className="text-muted mt-2 text-sm">
-          A complete list of my work and project case studies.
+    <PageIntro>
+      <header className="page-header">
+        <p className="page-kicker">Project index</p>
+        <h1>Systems I have built.</h1>
+        <p>
+          A closer look at the problem behind each project, the backend shape,
+          and the decisions made along the way.
         </p>
-      </div>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
-    </>
+      <ProjectList projects={projects} />
+    </PageIntro>
   );
 }

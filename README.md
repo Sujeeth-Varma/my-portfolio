@@ -1,39 +1,25 @@
-# Sujeeth Varma's Portfolio
+# Sujeeth Varma — Portfolio
 
-A minimal portfolio website built with **Next.js**, **Tailwind CSS**, and **Framer Motion**
+A monochrome, backend-focused portfolio built with Next.js, React, Tailwind CSS, and Motion.
 
-## ✨ Features
+## Routes
 
-- **Minimalist Aesthetic**: Clean dark-themed design with a focus on typography and readability.
-- **Dynamic Tech Stack**: Infinite marquee showing core competencies with custom icons.
-- **Responsive Design**: Fully optimized for mobile, tablet, and desktop screens.
-- **Dock Navigation**: Interactive floating dock for quick access to socials and resume.
-- **Smooth Animations**: Carefully balanced staggered animations for a refined feel.
+- `/` — profile, capabilities, selected systems, and timeline
+- `/projects` — complete project index
+- `/projects/[slug]` — engineering case study
 
-## 📂 Project Structure
-
-```text
-├── app/                  # Next.js App Router (Layouts & Pages)
-├── components/           # Modular & Reusable UI Components
-│   ├── Hero.tsx          # Profile & Introduction
-│   ├── TechStack.tsx     # Infinite Marquee
-│   ├── Projects.tsx      # Proof of Work
-│   ├── Contact.tsx       # Say Hello!
-│   └── Loader.tsx        # Initial Page Loader
-├── public/               # Static assets (Images, Resume)
-└── next.config.ts        # Next.js Configuration
-```
-
-## 🏃 Getting Started
-
-First, install the dependencies:
+## Development
 
 ```bash
 npm install
-```
-
-Then, run the development server:
-
-```bash
 npm run dev
 ```
+
+Quality checks:
+
+```bash
+npm run lint
+npm run build
+```
+
+The implementation plan and design rationale live in `.agents/revamp-1.md`.

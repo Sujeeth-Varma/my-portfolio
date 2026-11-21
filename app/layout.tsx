@@ -1,30 +1,49 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-// import Navbar from "@/components/Navbar";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import MotionProvider from "@/components/motion/MotionProvider";
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
 import "./globals.css";
-import Dock from "@/components/Dock";
 
-const inter = Inter({
+const sans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "700", "900", "100", "200", "300", "500", "600", "800"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500"],
+  display: "swap",
+});
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sujeeth.in";
+
 export const metadata: Metadata = {
-  title: "Sujeeth Varma ",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Sujeeth Varma",
+    template: "%s — Sujeeth Varma",
+  },
   description:
-    "Portfolio of Sujeeth Varma - Aspiring FullStack Engineer and Tech Enthusiast",
+    "Sujeeth Varma is a backend-focused software engineer building applications around APIs, data, and realtime communication.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Sujeeth Varma",
     description:
-      "Portfolio of Sujeeth Varma - Aspiring FullStack Engineer and Tech Enthusiast",
+      "Selected systems and engineering decisions by Sujeeth Varma.",
     type: "website",
+    url: "/",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Sujeeth Varma Portfolio",
+        alt: "Sujeeth Varma portfolio",
       },
     ],
   },
@@ -32,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sujeeth Varma",
     description:
-      "Portfolio of Sujeeth Varma - Aspiring FullStack Engineer and Tech Enthusiast",
+      "Selected systems and engineering decisions by Sujeeth Varma.",
     images: ["/og-image.png"],
   },
 };
@@ -43,15 +62,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased min-h-screen app-shell`}>
-        <main className="min-h-screen">
-          <div className="relative min-h-screen max-w-4xl border-2 border-y-0 app-frame mx-auto px-6 py-12">
-            {/* <Navbar /> */}
-            {children}
-            <Dock />
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+      <body>
+        <MotionProvider>
+          <a className="skip-link" href="#main-content">
+            Skip to content
+          </a>
+          <div className="site-shell">
+            <SiteHeader />
+            <main id="main-content">{children}</main>
+            <SiteFooter />
           </div>
-        </main>
+        </MotionProvider>
       </body>
     </html>
   );
