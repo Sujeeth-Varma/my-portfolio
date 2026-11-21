@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/og-image.webp",
+        width: 1638,
+        height: 1072,
         alt: "Sujeeth Varma portfolio",
       },
     ],
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Sujeeth Varma",
     description:
       "Selected systems and engineering decisions by Sujeeth Varma.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
 };
 
